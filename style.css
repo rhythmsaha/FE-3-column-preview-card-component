@@ -1,0 +1,118 @@
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--very-light-gray);
+}
+
+main {
+    width: 90%;
+    margin: 25vh auto 5vh;
+    max-width: 940px;
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        flex-direction: column;
+        margin: 5vh auto;
+    }
+}
+
+section {
+    color: var(--transparent-white);
+    padding: 3rem;
+    max-width: 33.33%;
+}
+
+@media screen and (max-width: 800px) {
+    section {
+        color: var(--transparent-white);
+        padding: 3rem;
+        max-width: 100%;
+    }
+}
+
+.sedan {
+    background: var(--bright-orange);
+}
+.suv {
+    background: var(--dark-cyan);
+}
+.luxury {
+    background: var(--very-dark-cyan);
+}
+
+.heading {
+    font-family: "Big Shoulders Display", cursive;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    letter-spacing: 1px;
+    color: var(--very-light-gray);
+}
+
+@media screen and (max-width: 800px) {
+    .heading {
+        margin: 1.5rem 0;
+    }
+}
+
+.paragraph {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 15px;
+    line-height: 1.8rem;
+    word-spacing: 1px;
+}
+
+section button {
+    margin-top: 3rem;
+    outline: none;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background: var(--very-light-gray);
+    border-radius: 2rem;
+    font-family: "Lexend Deca", sans-serif;
+    font: 1rem;
+    border: 2px solid transparent;
+    transition: all;
+    transition-duration: 250ms;
+}
+
+@media screen and (max-width: 800px) {
+    section button {
+        margin-top: 2rem;
+    }
+}
+
+.sedan button {
+    color: var(--bright-orange);
+}
+
+.suv button {
+    color: var(--dark-cyan);
+}
+.luxury button {
+    color: var(--very-dark-cyan);
+}
+
+section button:hover {
+    background: transparent;
+    color: var(--very-light-gray);
+    border-color: var(--very-light-gray);
+}
